@@ -42,3 +42,8 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+.modal{
+  padding: 1rem;
+  background-color: bisque;
+}
