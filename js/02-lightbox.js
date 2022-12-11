@@ -19,21 +19,28 @@ galleryItems.forEach((element) => {
 	image.classList.add("gallery__image");
 	image.src = element.preview;
 	image.alt = element.description;
-	image.dataset.source = element.original;
 	link.append(image);
 });
-
+console.log(gallery)
 gallery.addEventListener("click", (event) => {
 	event.preventDefault();
 	const clickedImg = event.target;
 	if (clickedImg.nodeName !== "IMG") return;
 	const originalImg = clickedImg.dataset.source;
+<<<<<<< Updated upstream
 	const modal = lightbox;
 	// const modalImg = modal.querySelector("img");
 	const description = clickedImg.alt;
 	modal.src = originalImg;
 	modal.alt = description;
 	lightbox.sourceAttr = 'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg'
+=======
+	const modal = event.element();
+	const modalImg = modal.querySelector("img");
+	const description = clickedImg.alt;
+	modalImg.src = originalImg;
+	modalImg.alt = description;
+>>>>>>> Stashed changes
 	lightbox.open();
 });
 
