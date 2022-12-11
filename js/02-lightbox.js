@@ -28,11 +28,12 @@ gallery.addEventListener("click", (event) => {
 	const clickedImg = event.target;
 	if (clickedImg.nodeName !== "IMG") return;
 	const originalImg = clickedImg.dataset.source;
-	// const modal = instance.element();
+	const modal = lightbox;
 	// const modalImg = modal.querySelector("img");
-	// const description = clickedImg.alt;
-	// modalImg.src = originalImg;
-	// modalImg.alt = description;
+	const description = clickedImg.alt;
+	modal.src = originalImg;
+	modal.alt = description;
+	lightbox.sourceAttr = 'https://cdn.pixabay.com/photo/2019/05/14/16/43/himilayan-blue-poppy-4202825__340.jpg'
 	lightbox.open();
 });
 
