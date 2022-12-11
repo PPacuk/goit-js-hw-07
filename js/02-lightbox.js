@@ -36,7 +36,7 @@ gallery.addEventListener("click", (event) => {
 	lightbox.open();
 });
 
-document.addEventListener("keydown", (event) => {
-	if (event.key !== "Escape") return;
-	instance.close();
-});
+// document.addEventListener("keydown", (event) => {
+// 	if (event.key !== "Escape") return;
+// 	instance.close();
+// });
